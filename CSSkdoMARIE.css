@@ -1057,3 +1057,162 @@ body {
         border-radius: 24px;
     }
 }
+
+/* CONFORT SUR TELEPHONE */
+@media (max-width: 600px) {
+    .carte {
+        width: min(94vw, 500px);
+        padding: 20px 15px 26px;
+    }
+
+    .carte h1 {
+        font-size: clamp(38px, 11vw, 52px);
+    }
+
+    .sous-titre {
+        margin-bottom: clamp(35px, 8vh, 58px);
+    }
+
+    .enveloppe {
+        width: min(300px, 82vw);
+        height: clamp(170px, 53vw, 195px);
+    }
+
+    .lettre {
+        height: min(155px, 82%);
+    }
+
+    .enveloppe.ouverte .lettre {
+        transform: translateY(-95px);
+    }
+
+    .page-secret {
+        overflow-y: auto;
+        padding: max(18px, env(safe-area-inset-top)) 18px max(18px, env(safe-area-inset-bottom));
+    }
+
+    .boite-secret {
+        width: min(100%, 390px);
+        padding: 28px 21px;
+    }
+
+    .page-surprise {
+        padding: max(24px, env(safe-area-inset-top)) 13px max(24px, env(safe-area-inset-bottom));
+    }
+
+    .papier-lettre {
+        width: 100%;
+        padding: 28px 21px;
+    }
+
+    .contenu-lettre {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .page-album {
+        padding: max(28px, env(safe-area-inset-top)) 14px max(42px, env(safe-area-inset-bottom));
+    }
+
+    .album-photos {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+        width: min(100%, 420px);
+    }
+
+    .polaroid {
+        width: 100%;
+        max-width: 420px;
+        padding: 10px 10px 16px;
+    }
+
+    .polaroid.visible:hover {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    .polaroid:nth-child(even).visible:hover {
+        transform: translateY(0) rotate(5deg);
+    }
+
+    #page-gateau {
+        padding: max(22px, env(safe-area-inset-top)) 12px max(26px, env(safe-area-inset-bottom));
+    }
+
+    #page-gateau h2 {
+        font-size: clamp(30px, 8vw, 44px);
+        line-height: 1.15;
+    }
+
+    .scene-anniversaire {
+        width: 100%;
+        border-width: 2px;
+    }
+
+    #video-anniversaire {
+        width: 100%;
+        max-height: 62vh;
+        object-fit: contain;
+    }
+
+    #message-gateau {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    #message-final {
+        font-size: clamp(30px, 8vw, 44px);
+        line-height: 1.15;
+    }
+
+    .bouton-suite,
+    .boite-secret button,
+    .bouton-entrer {
+        min-height: 48px;
+    }
+}
+
+@media (max-height: 560px) and (orientation: landscape) {
+    .intro-anniversaire {
+        overflow-y: auto;
+        align-items: start;
+    }
+
+    .intro-contenu {
+        padding: 12px;
+    }
+
+    .intro-accroche {
+        margin-bottom: 12px;
+        font-size: 30px;
+    }
+
+    .gateau-anime {
+        height: 185px;
+        margin-bottom: 12px;
+    }
+
+    .gateau-corps {
+        bottom: 24px;
+        height: 100px;
+    }
+
+    .gateau-glaçage {
+        bottom: 110px;
+    }
+
+    .gateau-assiette {
+        bottom: 12px;
+    }
+
+    .bougies-animees {
+        top: 55px;
+    }
+
+    .page-secret {
+        justify-content: flex-start;
+    }
+
+    .boite-secret {
+        margin: auto;
+    }
+}
